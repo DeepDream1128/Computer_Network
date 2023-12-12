@@ -1,4 +1,5 @@
 from scapy.all import *
+import time 
 
 def tcp_handshake(target_ip, target_port):
     # 构造SYN报文
@@ -31,8 +32,10 @@ def tcp_teardown(target_ip, target_port, seq, ack_seq):
         print("TCP四次挥手完成")
 
 if __name__ == "__main__":
-    target_ip = "www.google.com"  # 目标服务器IP
-    target_port = 80           # 目标服务器端口
+    target_ip = "127.0.0.1"  # 目标服务器IP
+    target_port = 8080              # 目标服务器端口
     seq, ack_seq = tcp_handshake(target_ip, target_port)
+
     if seq and ack_seq:
+        time.sleep(2)  # 等待一段时间再开始挥手
         tcp_teardown(target_ip, target_port, seq, ack_seq)
