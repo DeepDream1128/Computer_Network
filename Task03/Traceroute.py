@@ -1,7 +1,7 @@
 from scapy.all import *
 import sys
 
-def traceroute(dest, max_hops=30):
+def traceroute(dest, max_hops=300):
     for ttl in range(1, max_hops + 1):
         pkt = IP(dst=dest, ttl=ttl) / ICMP()
         # 获取当前时间戳
@@ -20,5 +20,5 @@ def traceroute(dest, max_hops=30):
                 break
 
 if __name__ == "__main__":
-    dest = sys.argv[1] if len(sys.argv) > 1 else "google.com"
+    dest = sys.argv[1] if len(sys.argv) > 1 else "10.206.17.20"
     traceroute(dest)

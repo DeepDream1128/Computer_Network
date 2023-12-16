@@ -26,6 +26,6 @@ def scan(ip, ports, max_threads=100):
             print(f"Port {port}: {status}")
 
 if __name__ == "__main__":
-    target_ip = sys.argv[1] if len(sys.argv) > 1 else "218.193.144.94"
-    ports = range(1, 1025)  # Standard range of ports
+    target_ip = sys.argv[1] if len(sys.argv) > 1 else "10.206.17.20"
+    ports = range(80, 141)  # Standard range of ports
     scan(target_ip, ports)

@@ -8,7 +8,7 @@ def subnet_division(network_address, subnet_mask, required_subnets):
     new_prefix_length = network.prefixlen + (required_subnets - 1).bit_length()
 
     # 生成和打印子网划分方案
-    print("子网划分方案（表格形式）：")
+    print("子网划分方案：")
     print(f"{'子网地址':<20}{'广播地址':<20}{'可用地址范围':<40}{'子网掩码':<20}")
     for subnet in network.subnets(new_prefix=new_prefix_length):
         network_address_str = str(subnet.network_address)

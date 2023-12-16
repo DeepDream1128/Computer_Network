@@ -23,4 +23,4 @@ def send_file_ipv6(filename, target_ip, port):
     s.close()
 
 
-send_file_ipv6('TUP_train.zip', '2001:da8:8008:315:8b9b:2eac:b905:2574', 12345)
+send_file_ipv6('Task07/yolov5s.pt', '2001:da8:8008:315:b9b4:aa92:96c4:5fee', 12345)
