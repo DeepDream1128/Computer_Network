@@ -79,4 +79,4 @@ def ping(host, timeout=1, count=4):
         time.sleep(1)
 
 if __name__ == "__main__":
-    ping("www.baidu.com")
+    ping("www.12123.com")

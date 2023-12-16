@@ -20,5 +20,5 @@ def traceroute(dest, max_hops=300):
                 break
 
 if __name__ == "__main__":
-    dest = sys.argv[1] if len(sys.argv) > 1 else "10.206.17.20"
+    dest = sys.argv[1] if len(sys.argv) > 1 else "103.235.47.103"
     traceroute(dest)
