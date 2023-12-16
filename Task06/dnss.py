@@ -13,8 +13,8 @@ def query_dns(domain, record_type, dns_server):
         print(f"Error querying {domain} for {record_type} record: {e}")
 
 if __name__ == "__main__":
-    domain_to_query = "www.dhu.edu.cn"
-    dns_server_to_use = "114.114.114.114"  # Google's public DNS server
+    domain_to_query = "www.github.com"
+    dns_server_to_use = "8.8.8.8"  # Google's public DNS server
     record_types = ["A", "NS", "SOA", "MX", "CNAME"]
 
     for record_type in record_types:

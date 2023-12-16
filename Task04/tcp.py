@@ -33,9 +33,9 @@ def tcp_teardown(target_ip, target_port, seq, ack_seq):
 
 if __name__ == "__main__":
     target_ip = "127.0.0.1"  # 目标服务器IP
-    target_port = 8080              # 目标服务器端口
+    target_port = 123            # 目标服务器端口
     seq, ack_seq = tcp_handshake(target_ip, target_port)
 
     if seq and ack_seq:
-        time.sleep(2)  # 等待一段时间再开始挥手
+        time.sleep(5)  # 等待一段时间再开始挥手
         tcp_teardown(target_ip, target_port, seq, ack_seq)
